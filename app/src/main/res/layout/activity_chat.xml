@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ChatActivity"
+    android:paddingBottom="8dp">
+
+    <include
+        android:id="@+id/chat_toolbar"
+        layout="@layout/app_bar_layout" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/private_message_list_of_users"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/chat_toolbar"
+        android:layout_above="@+id/chat_linear_layout"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp" />
+
+        <!--<ImageButton-->
+            <!--android:id="@+id/send_file_btn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:src="@drawable/send_file" />-->
+
+    <LinearLayout
+        android:id="@+id/chat_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginEnd="8dp">
+
+        <EditText
+            android:id="@+id/input_message"
+            android:layout_width="335dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_drawable"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/emoji"
+            android:drawableEnd="@drawable/camera"
+            android:hint="Type a message"
+            android:inputType="textCapSentences"
+            android:paddingEnd="16dp"
+            android:paddingStart="8dp" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/send_message_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/send_message"
+        app:backgroundTint="#2B3D4D"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="8dp"
+        app:fabSize="normal"/>
+
+
+</RelativeLayout>
